@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Geometry Challenge</title>
+<style type="text/css">
+    body {
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    canvas {
+        display: block;
+        margin: 0 auto;
+        background-color: white;
+    }
+</style>
+</head>
+<body>
+    <h1>Geometry Challenge</h1>
+    <canvas id="myCanvas" width="600" height="400">
+    </canvas>	
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var x = 10;
+    var y = 10;
+    var size = 50;
+	var i;
+
+	var rowCount = 8;
+	var r;
+	
+
+    
+	for ( i = 0; i < rowCount; i++) {
+	for(r =0; r < rowCount; r++) {
+	ctx.fillStyle = "red";
+	ctx.fillRect(x,y,size,size);
+	x += 60;
+        size -= 5;
+        y+=2;
+	}
+        y+= 60;
+	x = 10;
+	size = 50;
+}
+</script>
+</body>
+</html>
